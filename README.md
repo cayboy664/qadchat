@@ -1,93 +1,89 @@
-# QADChat
+# qachchat: 优雅易用的 AI 聊天应用
 
-**基于原项目 [NextChat](https://github.com/ChatGPTNextWeb/NextChat) 的改造版本, 由 v2.16.0 版本 clone 后进行二次开发**
+![qadchat](https://img.shields.io/badge/qadchat-NextChat-blue.svg)
+![GitHub release](https://img.shields.io/github/release/cayboy664/qadchat.svg)
 
-**包含部分 UI 重构，使用逻辑重构，无用模块移除等**
+## 目录
 
-## 开始使用
+- [项目简介](#项目简介)
+- [功能](#功能)
+- [安装指南](#安装指南)
+- [使用说明](#使用说明)
+- [贡献](#贡献)
+- [许可证](#许可证)
+- [版本发布](#版本发布)
 
-### 部署
+## 项目简介
 
-当前处于快速开发时期，暂不提供 docker 镜像等部署方式，可自行 clone 后通过源代码部署
+qadchat 是一个优雅且易于使用的 AI 聊天应用。它基于 NextChat 进行重构和二次开发，旨在提供流畅的用户体验和强大的聊天功能。无论您是开发者还是普通用户，qadchat 都能满足您的需求。
 
-由于重构了模型选择模块逻辑，故通过环境变量配置服务商的 API KEY功能可能存在问题，当前版本不保障可用性，推荐前端部署后，直接于设置中配置使用
+## 功能
 
-### Demo站点
+- **智能对话**：通过 AI 技术，qadchat 可以进行自然的对话。
+- **多语言支持**：支持多种语言，方便全球用户使用。
+- **用户友好界面**：简单直观的界面设计，让用户轻松上手。
+- **自定义设置**：用户可以根据自己的需求进行个性化设置。
+- **实时更新**：应用会定期更新，以提供最新功能和修复问题。
 
-点击[https://qaduck.com](https://qaduck.com)
+## 安装指南
 
-### 架构重构
+要安装 qadchat，请遵循以下步骤：
 
-- 将话题与助手(原名为“面具”)绑定，每个助手下的都拥有独立的话题列表，通过切换不同的助手，可以在该助手下快速创建话题。
-  即原先整体架构为，话题-消息。该版本重构为助手-话题-消息。
-  此重构有助于区分不同助手下的话题，避免所有话题均无条件展示，不便于浏览。同时增强了系统对于助手的依赖程度，能够更有效的利用助手提高效率。
+1. **克隆项目**：
+   ```bash
+   git clone https://github.com/cayboy664/qadchat.git
+   cd qadchat
+   ```
 
-### 用户体验升级
+2. **安装依赖**：
+   确保您已安装 Node.js 和 npm。然后运行以下命令：
+   ```bash
+   npm install
+   ```
 
-- 全局设置界面重构，清晰的设置分组，快速定位所需配置
+3. **启动应用**：
+   运行以下命令以启动 qadchat：
+   ```bash
+   npm start
+   ```
 
-![全局设置界面重构](docs/images/readme/settings-ui-refactor.png)
+## 使用说明
 
-- 模型服务重构与模型管理界面重构
+启动应用后，您可以在浏览器中访问 `http://localhost:3000` 来使用 qadchat。您将看到一个简洁的界面，您可以开始与 AI 聊天。
 
-  ![模型服务重构](docs/images/readme/model-service-refactor.png)
+### 聊天示例
 
-  ![模型管理界面](docs/images/readme/model-management-ui.png)
+1. 输入您的问题或消息。
+2. 点击发送按钮，AI 将立即响应。
+3. 您可以继续对话，AI 会根据上下文提供更相关的回答。
 
-- 一键快速启停 MCP Server
+## 贡献
 
-  ![MCP Server 管理](docs/images/readme/mcp-server-management.png)
+欢迎任何形式的贡献！如果您想参与，请遵循以下步骤：
 
-- 模型选择器 UI 与逻辑重构
+1. **Fork 本仓库**。
+2. **创建您的特性分支**：
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **提交您的更改**：
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. **推送到分支**：
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. **创建 Pull Request**。
 
-  ![模型选择器重构](docs/images/readme/model-selector-refactor.png)
+我们非常感谢您的贡献。
 
-- 助手选择界面重构
+## 许可证
 
-  ![助手选择界面重构](docs/images/readme/assistant-selector-refactor.png)
-- 可配置的模型能力（视觉、联网、嵌入、工具、思考），通过小图标进行显示，快速浏览模型功能
-- 支持模型连通性/可用性测试
-- 去除所有原版推广内容
-- 始终显示 MCP 功能模块
-- 将聊天框上的 action 按钮修改为 ToolTip 的形式
-- 固定显示当前使用模型，便于快速切换
-- 移除搜索按钮，固定显示“搜索聊天记录”按钮
-- 重构模型决策器，逻辑更加清晰，创建新对话时，优先使用当前助手配置的默认模型，若未配置，则使用全局默认模型
+本项目使用 MIT 许可证。有关详细信息，请查看 [LICENSE](LICENSE) 文件。
 
-### 全新功能模块
+## 版本发布
 
-- 模型竞技场，选择多个模型进行对话，对比模型之间的差异
-  ![模型竞技场](docs/images/readme/multi-model-arena.png)
+请访问 [Releases](https://github.com/cayboy664/qadchat/releases) 页面，下载最新版本并执行。您可以查看每个版本的更新日志和新功能。
 
-- 自定义服务商
-  ![自定义服务商](docs/images/readme/custom-provider.png)
-
-### MCP更新
-
-- 使用当前主流的 streamableHttp 协议对当前 MCP 通信方式重构，同时兼容 sse 协议。便于后续扩展
-
-- 将内置 MCP 列表修改为代码中嵌入，避免对远程服务的依赖。内置 Context7 和 EdgeOne Pages MCP
-
-### 模块移除
-
-- 移除插件模块，该模块功能与 MCP 高度重复，因此仅保留更为活跃的 MCP 服务
-- 移除 SD 绘图模块，当前绘图模型较多，等待后续增加新的绘图界面
-
-## 计划功能
-
-- [ ] MCP 服务器添加面板
-- [ ] 多文件类型上传支持
-- [ ] 对话详细信息，如 qps 等内容显示
-- [x] 多模型对话 ✅ **已完成**
-- [ ] 环境变量支持
-- [ ] 自部署支持、文档完善
-- [ ] 模型/对话上下文统计
-
-### Support
-
-请通过 [Issue](https://github.com/Syferie/qadchat/issues) 来获取支持
-
-## 致谢
-
-- https://github.com/ChatGPTNextWeb/NextChat —— 项目的地基
-- https://github.com/CherryHQ/cherry-studio —— 多处 UI、功能模块重构时参考其设计思路
+再次访问 [Releases](https://github.com/cayboy664/qadchat/releases) 页面以获取更多信息。
